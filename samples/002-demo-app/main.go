@@ -11,5 +11,7 @@ func main() {
 	runCustomTypesDemo()
 	println("-- Write/read data --")
 	runWriteReadFileDemo()
+	println("-- Random --")
+	runRandomDemo()
 
 }
