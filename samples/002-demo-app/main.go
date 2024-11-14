@@ -1,17 +1,21 @@
 package main
 
+import "fmt"
+
 func main() {
-	println("-- Function --")
+	fmt.Println("-- Function --")
 	runFunctionsDemo()
-	println("-- Array --")
+	fmt.Println("-- Array --")
 	runArraysDemo()
-	println("-- Slice --")
+	fmt.Println("-- Slice --")
 	runSliceDemo()
-	println("-- Custom types --")
+	fmt.Println("-- Map --")
+	runMapDemo()
+	fmt.Println("-- Custom types --")
 	runCustomTypesDemo()
-	println("-- Write/read data --")
+	fmt.Println("-- Write/read data --")
 	runWriteReadFileDemo()
-	println("-- Random --")
+	fmt.Println("-- Random --")
 	runRandomDemo()
 
 }

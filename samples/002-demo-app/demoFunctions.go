@@ -1,11 +1,13 @@
 package main
 
+import "fmt"
+
 func runFunctionsDemo() {
 	card := getCard()
 	card1, card2, cardQuantity := getCards()
 
-	println(card)
-	println(card1, card2, cardQuantity)
+	fmt.Println(card)
+	fmt.Println(card1, card2, cardQuantity)
 }
 
 func getCard() string {

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"strings"
 )
@@ -16,7 +17,7 @@ func writeToFile(filename string) {
 	err := os.WriteFile(filename, d1, 0666)
 	if err != nil {
 		//Do something
-		println(err)
+		fmt.Println(err)
 		os.Exit(1)
 	}
 }
@@ -25,14 +26,14 @@ func readFromFile(filename string) {
 	content, err := os.ReadFile(filename)
 	if err != nil {
 		//Do something
-		println(err)
+		fmt.Println(err)
 		os.Exit(1)
 	}
 	lines := strings.Split(string(content), "\n")
 
 	for i, l := range lines {
 		for j, v := range strings.Fields(l) {
-			println(i, j, v)
+			fmt.Println(i, j, v)
 		}
 	}
 }

@@ -1,8 +1,8 @@
 package main
 
-import Helpers "./helpers"
+import "002-demo-app/helpers"
 
 func runCustomTypesDemo() {
-	samples := Helpers.NewDeck()
+	samples := helpers.NewDeck()
 	samples.PrintDeck()
 }

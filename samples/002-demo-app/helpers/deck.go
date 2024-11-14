@@ -1,4 +1,6 @@
-package Helpers
+package helpers
+
+import "fmt"
 
 type Deck []string
 
@@ -19,6 +21,6 @@ func NewDeck() Deck {
 
 func (d Deck) PrintDeck() {
 	for i, e := range d {
-		println(i, e)
+		fmt.Println(i, e)
 	}
 }
