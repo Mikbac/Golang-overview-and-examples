@@ -2,9 +2,12 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net/http"
 	"os"
 )
+
+type logWriter struct{}
 
 func main() {
 
@@ -16,6 +19,25 @@ func main() {
 	fmt.Println(resp.Status)
 	fmt.Println(resp.StatusCode)
 	fmt.Println(resp.Header)
-	fmt.Println(resp)
 
+	// only for testing purposes
+	//bs := make([]byte, 99999)
+	//resp.Body.Read(bs)
+	//fmt.Println(string(bs))
+
+	// Example
+	//io.Copy(os.Stdout, resp.Body)
+
+	lw := logWriter{}
+	io.Copy(lw, resp.Body)
+
+}
+
+// logWriter implements:
+// Write(p []byte) (n int, err error)
+func (logWriter) Write(bs []byte) (int, error) {
+	fmt.Println(string(bs))
+	fmt.Println("--->", len(bs))
+
+	return len(bs), nil
 }
