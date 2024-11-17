@@ -1,3 +1,3 @@
 module 101-http-client
 
-go 1.23.2
+go 1.23
