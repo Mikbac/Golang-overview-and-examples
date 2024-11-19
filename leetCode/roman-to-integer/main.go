@@ -10,9 +10,6 @@ func main() {
 	fmt.Println(romanToInt("III"))     // 3
 	fmt.Println(romanToInt("LVIII"))   // 58
 	fmt.Println(romanToInt("MCMXCIV")) // 1994
-
-	fmt.Println("---------------------------------")
-
 }
 
 // Runtime: 0 ms
